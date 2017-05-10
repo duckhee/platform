@@ -1,0 +1,36 @@
+@CHARSET "UTF-8";
+
+body, html {
+    height: 100%;
+   /* background-repeat: no-repeat;*/
+   	background-repeat: round;
+    background-image: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));
+}
+
+
+@media screen and (max-width: 768px) { /* 4. 모바일용 레이아웃이 되었을때 적용되는 CSS */ 
+.row-offcanvas { position: relative;
+-webkit-transition: all 0.25s ease-out; 
+-moz-transition: all 0.25s ease-out; 
+transition: all 0.25s ease-out; 
+}
+
+.row-offcanvas-right .sidebar-offcanvas {
+right: -50%;
+} 
+.row-offcanvas-left .sidebar-offcanvas {
+left: -50%;
+} 
+.row-offcanvas-right .active {
+right: 50%;
+}
+.row-offcanvas-left .active {
+left: 50%;
+} 
+.sidebar-offcanvas {
+position: absolute; 
+top: 0; 
+width: 50%;
+} 
+}
+

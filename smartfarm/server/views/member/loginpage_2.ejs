@@ -1,0 +1,66 @@
+i<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login Page</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/x-icon" href="http://s11.postimg.org/7kzgji28v/logo_sm_2_mr_1.png" />
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel = "stylesheet" href = "./css/loginpage.css" type="text/css">
+<link rel = "stylesheet" href = "./css/main.css" type="text/css">
+
+</head>
+
+
+<body>
+
+<% include ../common/nave.ejs %>
+
+
+<!--
+    you can substitue the span of reauth email for a input with the email and
+    include the remember me checkbox
+    -->
+    <div class="container">
+        <div class="card card-container">
+            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+            <img id="profile-img" class="profile-img-card" src="http://s11.postimg.org/7kzgji28v/logo_sm_2_mr_1.png" />
+            <p id="profile-name" class="profile-name-card"></p>
+    
+            <form class="form-signin" method = "post" action = "/process/login">
+                <span id="reauth-email" class="reauth-email"></span>
+                <label>ID</label>
+                <input type="text" name = "id" id="inputEmail" class="form-control" placeholder="ID" required autofocus>
+                <label>password</label>
+                <input type="password" name = "password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <div id="remember" class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-me" name = "remember"> Remember me
+                    </label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+            </form><!-- /form -->
+            <button class = "btn btn-lg btn-primary btn-block btn-signin" type = "submit">Login facebook</button>
+            <a href="#" class="forgot-password">
+                Forgot the password?
+            </a>
+            <br>
+           <div class = "registe">
+            You are not member?  &nbsp; 
+            <a href = "/registe">Create an account
+            </a>
+            </div>
+        </div><!-- /card-container -->
+    </div><!-- /container -->
+
+
+
+
+</body>
+</html>
+
